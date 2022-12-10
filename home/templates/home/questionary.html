@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+{% block css_files %}
+        <link rel="stylesheet" href="{% static 'home.css' %}"/>
+{% endblock %}
+
+<head>
+	<title>Quiz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+</head>
+
+<body>
+    <h2 class="header">Questionario</h2>
+
+
+
+    <form action="{% url 'xr_form' %}" method="post">
+        {% csrf_token %}
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname"><br><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname"><br><br>
+
+        <label for="lname">Pergunta 1</label><br>
+        <input type="text" id="lname"><br><br>
+
+        <label for="lname">Pergunta 2</label><br>
+        <input type="text" id="lname"><br><br>
+
+        <label for="lname">Pergunta 3</label><br>
+        <input type="text" id="lname"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+{% block css_files %}
+        <link rel="stylesheet" href="{% static 'home.css' %}"/>
+{% endblock %}
+
+<head>
+	<title>Touch Gestures</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h2 class="header">Click Here to access the VR Application</h2>
+    
+
+
+
+    <h1 class="graficos">GRAFICO AQUI</h1>
+
+    <footer class="footer">
+    </footer>
+	<script type="module" src="{% static 'hittingObject_xr.js' %}">HERE</script>
+</body>
+</html>
