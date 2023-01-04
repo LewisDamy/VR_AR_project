@@ -10,31 +10,78 @@
 <head>
 	<title>Quiz</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
 <body>
     <h2 class="header">Questionario</h2>
 
-
-
-    <form action="{% url 'xr_form' %}" method="post">
+    <form action="{% url 'xr_form' %}" method="post" id="questionario">
         {% csrf_token %}
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname"><br><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname"><br><br>
+        <label for="name">Teu nome:</label><br>
+        <input type="text" name="name" id="name"><br><br>
 
-        <label for="lname">Pergunta 1</label><br>
-        <input type="text" id="lname"><br><br>
+        <label for="p1">Quantas pessoas moram em tua casa?</label><br>
+        <input type="text" name="p1" id="p1"><br><br>
 
-        <label for="lname">Pergunta 2</label><br>
-        <input type="text" id="lname"><br><br>
+        <label for="p2">Qual o sistema de aquecimento da sua casa?</label><br>
+        <input type="text" name="p2" id="p2" name="p1"><br><br>
 
-        <label for="lname">Pergunta 3</label><br>
-        <input type="text" id="lname"><br><br>
+        <label for="p3">Quantas torneiras há em sua casa?</label><br>
+        <input type="text" name="p3" id="p3"><br><br>
 
-        <input type="submit" value="Submit">
+        <label for="p4">Em que tipo de casa vives?</label><br>
+        <input type="text" name="p4" id="p4"><br><br>
+
+        <label for="p5">Quantas refeições de carne ou peixe comes por semana?</label><br>
+        <input type="text" name="p5" id="p5"><br><br>
+
+        <label for="p6">Quantas refeições feitas em casa é que comes por semana?</label><br>
+        <input type="text" name="p6" id="p6"><br><br>
+
+        <label for="p7">Procuras comprar alimentos produzidos localmente?</label><br>
+        <input type="text" name="p7" id="p7"><br><br>
+
+        <label for="p8">Que tipo de automóvel tens (se não tiveres não respondas)</label><br>
+        <input type="text" name="p8" id="p8"><br><br>
+
+        <label for="p9">Como vais para o emprego?</label><br>
+        <input type="text" name="p9" id="p9"><br><br>
+
+        <label for="p10">Quantos quilómetros tens de percorrer de carro para chegar ao
+            emprego? (se não tiveres carro não respondas)</label><br>
+        <input type="text" name="p10" id="p10"><br><br>
+
+        <label for="p11">Aonde foste nas últimas férias?</label><br>
+        <input type="text" name="p11" id="p11"><br><br>
+
+        <label for="p12">Em quantos fins-de-semana é que viajas de carro (mínimo 20 km de
+            distância)</label><br>
+        <input type="text" name="p12" id="p12"><br><br>
+
+        <label for="p13">Quantas compras significativas fizeste (ou os teus pais...) em 2002?
+            (por exemplo: TV, vídeo, computador, mobílias, etc.)</label><br>
+        <input type="text" name="p13" id="p13"><br><br>
+
+        <label for="p14">Costumas comprar produtos de baixo consumo de energia?</label><br>
+        <input type="text" name="p14" id="p14"><br><br>
+
+        <label for="p15">Procuras reduzir a produção de resíduos? (por exemplo: evitas
+            produtos com muita embalagem, reutilizas o papel, evitas os sacos
+            de plástico, etc.)</label><br>
+        <input type="text" name="p15" id="p15"><br><br>
+
+        <label for="p16">Praticas compostagem dos resíduos orgânicos?</label><br>
+        <input type="text" name="p16" id="p16"><br><br>
+
+        <label for="p17">Costumas triar o lixo e colocá-lo no ecoponto para ser reciclado?</label><br>
+        <input type="text" name="p17" id="p17"><br><br>
+
+        <label for="p18">Quantos sacos de lixo é que produzes por semana?</label><br>
+        <input type="text" name="p18" id="p18"><br><br>
+
+        <input type="submit" name="submit" form="questionario" value="Submit">
+
     </form>
 
 
