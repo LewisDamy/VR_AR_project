@@ -1,6 +1,5 @@
 ### VR/AR Project
-In order to run this project, download it and with python installed,
-run python `python -m http.server` inside this folder.
+In order to run this project, download it and with python installed and follow the steps:
 1. Create your venv with `python -m venv .venv`
 2. Activate it 
     - (Windows Users): `.venv/Scripts/activate`
