@@ -12,21 +12,48 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js" crossorigin="anonymous"></script>
+
+  <!-- Código em javascript para o calculo da pegada -->
+  <!-- Exemplo do uso de variáveis em JavaScript -->
+  <script type="text/javascript">
+    pontuacao = 0;
+
+    pontuacao += parseInt('{{p1}}');
+    pontuacao += parseInt('{{p2}}');
+    pontuacao += parseInt('{{p3}}');
+    pontuacao += parseInt('{{p4}}');
+    pontuacao += parseInt('{{p5}}');
+    pontuacao += parseInt('{{p6}}');
+    pontuacao += parseInt('{{p7}}');
+    pontuacao += parseInt('{{p8}}');
+    pontuacao += parseInt('{{p9}}');
+    pontuacao += parseInt('{{p10}}');
+    pontuacao += parseInt('{{p11}}');
+    pontuacao += parseInt('{{p12}}');
+    pontuacao += parseInt('{{p13}}');
+    pontuacao += parseInt('{{p14}}');
+    pontuacao += parseInt('{{p15}}');
+    pontuacao += parseInt('{{p16}}');
+    pontuacao += parseInt('{{p17}}');
+    pontuacao += parseInt('{{p18}}');
+
+  </script>
+
+  
 </head>
 
 <body>
-    <h2 class="header">Click Here to access the VR Application</h2>
+  <script type="text/javascript">
+    alert("Pontuação: " + pontuacao);
+  </script>
 
-    <h2 class="header">Olá {{name}}</h2>
+  <!-- Exemplo do uso de variáveis em HTML -->
+  <h2 class="header">Hello {{name}}! <br> Click Here to access the VR Application</h2>
 
-    <h1 class="graficos">GRAFICO AQUI</h1>
+  <h1 class="graficos">GRAFICO AQUI</h1>
 
-    <script type="text/javascript">
-      alert("Olá " + '{{name}}');
-    </script>
+  <footer class="footer"></footer>
 
-    <footer class="footer">
-    </footer>
 	<script type="module" src="{% static 'hittingObject_xr.js' %}">HERE</script>
 </body>
 </html>
