@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js" crossorigin="anonymous"></script>
 
-  <!-- Código em javascript para o calculo da pegada -->
+  <!-- Código em javascript para o calculo da pontuação -->
   <!-- Exemplo do uso de variáveis em JavaScript -->
   <script type="text/javascript">
     pontuacao = 0;
@@ -39,12 +39,41 @@
 
   </script>
 
+  <script type="text/javascript">
+    if(pontuacao != NaN)
+    {
+      pegada = "";
+
+      if(pontuacao <= 150)
+      {
+        pegada = "Menor que 4 ha";
+      }
+      else if(pontuacao <= 400)
+      {
+        pegada = "Entre 4 e 6 ha";
+      }
+      else if(pontuacao <= 600)
+      {
+        pegada = "Entre 6 e 8 ha";
+      }
+      else if(pontuacao <= 800)
+      {
+        pegada = "Entre 8 e 10 ha";
+      }
+      else
+      {
+        pegada = "Mais que 10 ha";
+      }
+    }
+
+  </script>
+
   
 </head>
 
 <body>
   <script type="text/javascript">
-    alert("Pontuação: " + pontuacao);
+    alert("Pegada ecológica: " + pegada);
   </script>
 
   <!-- Exemplo do uso de variáveis em HTML -->
