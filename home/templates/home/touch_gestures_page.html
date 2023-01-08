@@ -16,6 +16,40 @@
   <!-- Código em javascript para o calculo da pontuação -->
   <!-- Exemplo do uso de variáveis em JavaScript -->
   <script type="text/javascript">
+    stats = {
+        "alojamento": 0,
+        "alimentacao": 0,
+        "transporte": 0,
+        "consumo": 0,
+        "residuo": 0,
+    }
+    // graphplot = []; // 0 -> alojamento | 1 -> alimentacao | 2 -> transporte | 3 -> consumo | 4 -> residuo
+
+    // Alojamento
+    stats["alojamento"] += parseInt('{{p1}}');
+    stats["alojamento"] += parseInt('{{p2}}');
+    stats["alojamento"] += parseInt('{{p3}}');
+    stats["alojamento"] += parseInt('{{p4}}');
+    // Alimentacao
+    stats["alimentacao"] += parseInt('{{p5}}');
+    stats["alimentacao"] += parseInt('{{p6}}');
+    stats["alimentacao"] += parseInt('{{p7}}');
+    // Transporte
+    stats["transporte"] += parseInt('{{p8}}');
+    stats["transporte"] += parseInt('{{p9}}');
+    stats["transporte"] += parseInt('{{p10}}');
+    stats["transporte"] += parseInt('{{p11}}');
+    stats["transporte"] += parseInt('{{p12}}');
+    // Consumo
+    stats["consumo"] += parseInt('{{p13}}');
+    stats["consumo"] += parseInt('{{p14}}');
+    // Residuo
+    stats["residuo"] += parseInt('{{p15}}');
+    stats["residuo"] += parseInt('{{p16}}');
+    stats["residuo"] += parseInt('{{p17}}');
+    stats["residuo"] += parseInt('{{p18}}');
+
+    // intactio
     pontuacao = 0;
 
     pontuacao += parseInt('{{p1}}');
@@ -36,6 +70,11 @@
     pontuacao += parseInt('{{p16}}');
     pontuacao += parseInt('{{p17}}');
     pontuacao += parseInt('{{p18}}');
+
+
+
+    graphplot[0] -= parseInt('{{p1}}');
+    graphplot -= parseInt('{{p4}}');
 
   </script>
 
@@ -80,6 +119,8 @@
   <h2 class="header">Hello {{name}}! <br> Click Here to access the VR Application</h2>
 
   <h1 class="graficos">GRAFICO AQUI</h1>
+
+  
 
   <footer class="footer"></footer>
 
