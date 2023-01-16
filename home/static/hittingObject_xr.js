@@ -27,7 +27,29 @@ function init() {
     );
 
     /*Cálculo do escalar referente à pegada*/
-    escalar = pontuacao/100;
+    escalar = 1 - (pontuacao/100);
+    /*Obtenção da cor da árvore */
+    tree_color = 0xffffff * Math.random()
+    if(pegada == "Menor que 4 ha")
+    {
+        tree_color = 0x39c67a;
+    }
+    else if(pegada == "Entre 4 e 6 ha")
+    {
+        tree_color = 0x5baf50;
+    }
+    else if(pegada == "Entre 6 e 8 ha")
+    {
+        tree_color = 0x9cb34c;
+    }
+    else if(pegada == "Entre 8 e 10 ha")
+    {
+        tree_color = 0xa3965c;
+    }
+    else
+    {
+        tree_color = 0x868778;
+    }
 
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -78,7 +100,7 @@ if (reticle.visible) {
     // replace the next lines to add your own object in space
     const geometry = new THREE.CylinderBufferGeometry(0, 0.05 + (0.05*escalar), escalar, 32);
     const material = new THREE.MeshPhongMaterial({
-    color: 0xffffff * Math.random()
+    color: tree_color
     });
     const mesh = new THREE.Mesh(geometry, material);
     
