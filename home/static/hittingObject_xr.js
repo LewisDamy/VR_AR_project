@@ -11,6 +11,7 @@ let reticle;
 let controller;
 
 let escalar;
+let K;
 let tree_color;
 
 init();
@@ -30,7 +31,9 @@ function init() {
     );
 
     /*Cálculo do escalar referente à pegada*/
-    escalar = 1 - (pontuacao/100);
+    // escalar = 1 - (pontuacao/100);
+    escalar = (pontuacao);
+    K = 400/escalar;
     /*Obtenção da cor da árvore */
     tree_color = 0xffffff * Math.random();
     if(pegada == "Menor que 4 ha")
@@ -99,9 +102,9 @@ scene.add(reticle);
 
 function onSelect() {        
 if (reticle.visible) {
-    // cone added at the point of a hit test
+    // cone added at the point of a hit test 
     // replace the next lines to add your own object in space
-    const geometry = new THREE.CylinderBufferGeometry(0, 0.05 + (0.05*escalar), escalar, 32);
+    const geometry = new THREE.CylinderBufferGeometry(0, 0.05*K, 0.2*K, 32); //(0, 0.05 + (escalar/25), 32);
     const material = new THREE.MeshPhongMaterial({
     color: tree_color
     });
