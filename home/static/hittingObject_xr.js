@@ -10,6 +10,9 @@ let camera, scene, renderer;
 let reticle;
 let controller;
 
+let escalar;
+let tree_color;
+
 init();
 animate();
 
