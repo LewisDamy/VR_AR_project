@@ -29,7 +29,7 @@ function init() {
     /*Cálculo do escalar referente à pegada*/
     escalar = 1 - (pontuacao/100);
     /*Obtenção da cor da árvore */
-    tree_color = 0xffffff * Math.random()
+    tree_color = 0xffffff * Math.random();
     if(pegada == "Menor que 4 ha")
     {
         tree_color = 0x39c67a;
