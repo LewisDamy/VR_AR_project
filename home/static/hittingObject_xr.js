@@ -14,17 +14,20 @@ init();
 animate();
 
 function init() {
-container = document.createElement("div");
-document.body.appendChild(container);
+    container = document.createElement("div");
+    document.body.appendChild(container);
 
-scene = new THREE.Scene();
+    scene = new THREE.Scene();
 
-camera = new THREE.PerspectiveCamera(
-    70,
-    window.innerWidth / window.innerHeight,
-    0.01,
-    20
-);
+    camera = new THREE.PerspectiveCamera(
+        70,
+        window.innerWidth / window.innerHeight,
+        0.01,
+        20
+    );
+
+    /*Cálculo do escalar referente à pegada*/
+    escalar = pontuacao/100;
 
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -73,7 +76,7 @@ function onSelect() {
 if (reticle.visible) {
     // cone added at the point of a hit test
     // replace the next lines to add your own object in space
-    const geometry = new THREE.CylinderBufferGeometry(0, 0.05, 0.2, 32);
+    const geometry = new THREE.CylinderBufferGeometry(0, 0.05 + (0.05*escalar), escalar, 32);
     const material = new THREE.MeshPhongMaterial({
     color: 0xffffff * Math.random()
     });
