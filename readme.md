@@ -5,8 +5,9 @@ In order to run this project, download it and with python installed
     - (Windows Users): `.venv/Scripts/activate`
     - (Unix Users): `.venv/bin/activate`
 3. Install all dependencies with `pip install -r requirements.txt`
-4. Run the local server `python manage.py runserver`
-5. You can see your application at localhost or commonly at http://127.0.0.1:8000/home/
+4. Run the local server `python manage.py runserver 0.0.0.0:8000`
+5. You can see your application at your machine at http://127.0.0.1:8000/home/
+6. In order to open the application on mobile, you must know which is your IPAddress and do: IPAddress:8000/home/
 - If you have an iPhone you may need to install this XRViewer
 - For Android users most browsers work
 
